@@ -25,27 +25,33 @@
         </activity>
         <activity
             android:name="com.iitb.aakash.nationalconference.Arrangement"
-            android:label="@string/title_activity_arrangement" >
+            android:label="@string/title_activity_arrangement"
+            android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name="com.iitb.aakash.nationalconference.ContactUs"
-            android:label="@string/title_activity_contact_us" >
+            android:label="@string/title_activity_contact_us"
+            android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name="com.iitb.aakash.nationalconference.About"
-            android:label="@string/title_activity_about" >
+            android:label="@string/title_activity_about"
+            android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name="com.iitb.aakash.nationalconference.Speakers"
-            android:label="@string/title_activity_speakers" >
+            android:label="@string/title_activity_speakers"
+            android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name="com.iitb.aakash.nationalconference.Gettinghere"
-            android:label="@string/title_activity_gettinghere" >
+            android:label="@string/title_activity_gettinghere"
+            android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name="com.iitb.aakash.nationalconference.Schedule"
-            android:label="@string/title_activity_schedule" >
+            android:label="@string/title_activity_schedule"
+            android:screenOrientation="landscape" >
         </activity>
     </application>
 
