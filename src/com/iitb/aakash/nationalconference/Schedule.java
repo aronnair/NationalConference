@@ -19,9 +19,8 @@ import android.content.Intent;
 
 	public class Schedule  extends Activity {
 
-		ImageView day1,day2;
 		TextView txtHome, txtAbout, txtSchedule, txtSpeakers, txtArrangements,
-		txtContact;
+		txtContact, day1,day2;
 		
 		@Override
 		protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +33,8 @@ import android.content.Intent;
 			txtArrangements = (TextView) findViewById(R.id.txtArrangement);
 			txtContact = (TextView) findViewById(R.id.txtContact);
 		
-		day1=(ImageView)findViewById(R.id.button1);
-		day2=(ImageView)findViewById(R.id.button2);
+		day1=(TextView)findViewById(R.id.day1);
+		day2=(TextView)findViewById(R.id.day2);
 			
 		day1.setOnClickListener(new View.OnClickListener() {
 			
