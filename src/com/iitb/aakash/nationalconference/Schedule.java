@@ -43,7 +43,7 @@ import android.content.Intent;
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				
-				 File pdfFile = new File("/mnt/sdcard/Coding_Standards.pdf"); 
+				 File pdfFile = new File("/mnt/sdcard/day1schedule.pdf"); 
 			        if(pdfFile.exists()) 
 			        {
 
@@ -56,7 +56,7 @@ import android.content.Intent;
 			         			            
 			            else
 			            {
-			            	 Uri path = Uri.parse("file:///android_asset/CodingStandards.pdf");
+			            	 Uri path = Uri.parse("file:///android_asset/day1schedule.pdf");
 			            	 Intent intent  = new Intent(Intent.ACTION_VIEW);
 			            	 intent.setDataAndType(path, "application/pdf");
 			            	 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -74,7 +74,7 @@ import android.content.Intent;
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				
-				 File pdfFile = new File("/mnt/sdcard/User Manual.pdf"); 
+				 File pdfFile = new File("/mnt/sdcard/day2schedule.pdf"); 
 			        if(pdfFile.exists()) 
 			        {
 
@@ -87,7 +87,7 @@ import android.content.Intent;
 			         			            
 			            else
 			            {
-			            	 Uri path = Uri.parse("file:///android_asset/User Manual.pdf");
+			            	 Uri path = Uri.parse("file:///android_asset/day2schedule.pdf");
 			            	 Intent intent  = new Intent(Intent.ACTION_VIEW);
 			            	 intent.setDataAndType(path, "application/pdf");
 			            	 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
