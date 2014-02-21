@@ -46,7 +46,7 @@ public class Schedule extends Activity {
 		txtSpeakers = (TextView) findViewById(R.id.txtSpeaker);
 		txtArrangements = (TextView) findViewById(R.id.txtArrangement);
 		txtContact = (TextView) findViewById(R.id.txtContact);
-		checkTar = new File("/mnt/sdcard/EducationalContent.zip");
+		checkTar = new File("/mnt/sdcard/schedule.zip");
 
 		day1 = (TextView) findViewById(R.id.day1);
 		day2 = (TextView) findViewById(R.id.day2);
@@ -58,7 +58,7 @@ public class Schedule extends Activity {
 				// TODO Auto-generated method stub
 
 			
-				File pdfFile = new File("/mnt/sdcard/day1schedule.pdf");
+				File pdfFile = new File("/mnt/sdcard/schedule/day1schedule.pdf");
 				if (pdfFile.exists()) {
 
 					Uri path = Uri.fromFile(pdfFile);
@@ -70,6 +70,20 @@ public class Schedule extends Activity {
 
 				else {
 					startDownload();
+					
+					try {
+						Thread.sleep(3000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+					Uri path = Uri.fromFile(pdfFile);
+					Intent pdfIntent = new Intent(Intent.ACTION_VIEW);
+					pdfIntent.setDataAndType(path, "application/pdf");
+					pdfIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+					startActivity(pdfIntent);
+
 				}
 
 			}
@@ -82,7 +96,7 @@ public class Schedule extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 
-				File pdfFile = new File("/mnt/sdcard/day2schedule.pdf");
+				File pdfFile = new File("/mnt/sdcard/schedule/day2schedule.pdf");
 				if (pdfFile.exists()) {
 					
 					
@@ -96,6 +110,19 @@ public class Schedule extends Activity {
 				else {
 
 					startDownload();
+					try {
+						Thread.sleep(3000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+					Uri path = Uri.fromFile(pdfFile);
+					Intent pdfIntent = new Intent(Intent.ACTION_VIEW);
+					pdfIntent.setDataAndType(path, "application/pdf");
+					pdfIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+					startActivity(pdfIntent);
+
 
 				}
 
@@ -198,26 +225,12 @@ public class Schedule extends Activity {
 		// start spinner to show extraction progress
 
 		String zipFile = Environment.getExternalStorageDirectory()
-				+ "/EducationalContent.zip";
+				+ "/schedule.zip";
 		String unzipLocation = Environment.getExternalStorageDirectory() + "/";
-		new File("mnt/sdcard/Educational Content").mkdir();
-		new File("mnt/sdcard/Educational Content/HTML Contents").mkdir();
-		new File("mnt/sdcard/Educational Content/PDF Contents").mkdir();
-		new File("mnt/sdcard/Educational Content/Video Contents").mkdir();
-		new File("mnt/sdcard/Educational Content/HTML Contents/css").mkdir();
-		new File("mnt/sdcard/Educational Content/HTML Contents/images").mkdir();
-		new File(
-				"mnt/sdcard/Educational Content/HTML Contents/images_force_pressure_VIII")
-				.mkdir();
-		new File(
-				"mnt/sdcard/Educational Content/HTML Contents/images_motion_IX")
-				.mkdir();
-		new File("mnt/sdcard/Educational Content/HTML Contents/images_m_t_VII")
-				.mkdir();
-		new File("mnt/sdcard/Educational Content/HTML Contents/javascript")
-				.mkdir();
-		new File("mnt/sdcard/Educational Content/HTML Contents/images/new")
-				.mkdir();
+		new File("mnt/sdcard/schedule").mkdir();
+		/*new File("mnt/sdcard/schedule/day1schedule.pdf").mkdir();
+		new File("mnt/sdcard/schedule/day2schedule.pdf").mkdir();
+*/
 		Decompress d = new Decompress(zipFile, unzipLocation);
 		d.unzip();
 		// Toast.makeText(context, "unzipped", Toast.LENGTH_SHORT).show();
@@ -245,7 +258,7 @@ public class Schedule extends Activity {
 
 				InputStream input = new BufferedInputStream(url.openStream());
 				OutputStream output = new FileOutputStream(
-						"/mnt/sdcard/EducationalContent.zip");
+						"/mnt/sdcard/schedule.zip");
 
 				byte data[] = new byte[1024];
 
@@ -372,7 +385,7 @@ public class Schedule extends Activity {
 		/**
 		 * link for schedule pdf files
 		 **/
-		String url = "http://www.it.iitb.ac.in/AakashApps/repo/EducationalContent.zip";
+		String url = "http://www.it.iitb.ac.in/AakashApps/repo/schedule.zip";
 		new DownloadFileAsync().execute(url);
 	}
 	
