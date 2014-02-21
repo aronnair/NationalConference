@@ -109,7 +109,17 @@ them by increasing their choices. It also aims to understand and address the iss
 and will examine the assessment and regulatory issues in the use of technology in higher education." />
         </LinearLayout>
     </LinearLayout>
-
+    
+ 	<View
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:background="@android:color/darker_gray"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight ="20dp"
+    android:alpha="0.5"
+     />
+    
     <!-- BOTTOM MENU -->
 
     <LinearLayout
@@ -119,6 +129,7 @@ and will examine the assessment and regulatory issues in the use of technology i
         android:gravity="center"
         android:orientation="horizontal" >
 
+        	        	
         <TextView
             android:id="@+id/txtHome"
             android:layout_width="wrap_content"
