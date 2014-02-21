@@ -87,7 +87,7 @@
             android:textColor="@android:color/darker_gray"
             android:textSize="20dp" />
 
-        <TextView
+        <!-- <TextView
             android:id="@+id/divider"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -102,7 +102,7 @@
             android:layout_height="wrap_content"
             android:text="Getting Here"
             android:textColor="@android:color/darker_gray"
-            android:textSize="20dp" />
+            android:textSize="20dp" /> -->
 
         <TextView
             android:id="@+id/divider"
