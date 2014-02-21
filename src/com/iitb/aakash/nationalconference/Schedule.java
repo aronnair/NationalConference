@@ -19,9 +19,8 @@ import android.content.Intent;
 
 	public class Schedule  extends Activity {
 
-		ImageView day1,day2;
 		TextView txtHome, txtAbout, txtSchedule, txtSpeakers, txtArrangements,
-		txtContact;
+		txtContact, day1,day2;
 		
 		@Override
 		protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +33,8 @@ import android.content.Intent;
 			txtArrangements = (TextView) findViewById(R.id.txtArrangement);
 			txtContact = (TextView) findViewById(R.id.txtContact);
 		
-		day1=(ImageView)findViewById(R.id.button1);
-		day2=(ImageView)findViewById(R.id.button2);
+		day1=(TextView)findViewById(R.id.day1);
+		day2=(TextView)findViewById(R.id.day2);
 			
 		day1.setOnClickListener(new View.OnClickListener() {
 			
@@ -43,7 +42,7 @@ import android.content.Intent;
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				
-				 File pdfFile = new File("/mnt/sdcard/Coding_Standards.pdf"); 
+				 File pdfFile = new File("/mnt/sdcard/day1schedule.pdf"); 
 			        if(pdfFile.exists()) 
 			        {
 
@@ -56,7 +55,7 @@ import android.content.Intent;
 			         			            
 			            else
 			            {
-			            	 Uri path = Uri.parse("file:///android_asset/CodingStandards.pdf");
+			            	 Uri path = Uri.parse("file:///android_asset/day1schedule.pdf");
 			            	 Intent intent  = new Intent(Intent.ACTION_VIEW);
 			            	 intent.setDataAndType(path, "application/pdf");
 			            	 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -74,7 +73,7 @@ import android.content.Intent;
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				
-				 File pdfFile = new File("/mnt/sdcard/User Manual.pdf"); 
+				 File pdfFile = new File("/mnt/sdcard/day2schedule.pdf"); 
 			        if(pdfFile.exists()) 
 			        {
 
@@ -87,7 +86,7 @@ import android.content.Intent;
 			         			            
 			            else
 			            {
-			            	 Uri path = Uri.parse("file:///android_asset/User Manual.pdf");
+			            	 Uri path = Uri.parse("file:///android_asset/day2schedule.pdf");
 			            	 Intent intent  = new Intent(Intent.ACTION_VIEW);
 			            	 intent.setDataAndType(path, "application/pdf");
 			            	 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
