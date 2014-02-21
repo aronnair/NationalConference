@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.view.KeyEvent;
+import android.view.Menu;
 
 public class Speakers extends Activity {
 
@@ -89,6 +93,42 @@ public class Speakers extends Activity {
 				finish();
 			}
 		});
+	}
+
+	/*** code for On back pressed dialog box **/
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			exitByBackKey();
+
+			// moveTaskToBack(false);
+
+			return true;
+		}
+		return super.onKeyDown(keyCode, event);
+	}
+
+	protected void exitByBackKey() {
+
+		AlertDialog alertbox = new AlertDialog.Builder(this)
+				.setMessage("Do you want to exit application?")
+				.setPositiveButton("Yes",
+						new DialogInterface.OnClickListener() {
+
+							// do something when the button is clicked
+							public void onClick(DialogInterface arg0, int arg1) {
+
+								finish();
+								// close();
+
+							}
+						})
+				.setNegativeButton("No", new DialogInterface.OnClickListener() {
+
+					// do something when the button is clicked
+					public void onClick(DialogInterface arg0, int arg1) {
+					}
+				}).show();
+
 	}
 
 
