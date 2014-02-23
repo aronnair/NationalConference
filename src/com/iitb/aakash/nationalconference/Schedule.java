@@ -155,7 +155,7 @@ public class Schedule extends Activity {
 			@SuppressLint("NewApi")
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				// TODO Auto-generat	ed method stub
 				v.setAlpha((float) 0.2);
 				Intent infoactivity = new Intent(Schedule.this, ContactUs.class);
 				startActivity(infoactivity);
