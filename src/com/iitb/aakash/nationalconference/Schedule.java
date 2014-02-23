@@ -31,7 +31,7 @@ import android.widget.Toast;
 
 public class Schedule extends Activity {
 
-	TextView txtHome, txtAbout, txtSchedule, txtSpeakers, txtArrangements,
+	TextView txtHome, txtAbout, txtSchedule, txtInstr, txtArrangements,
 			txtContact, day1, day2;
 	File checkTar;
 	
@@ -43,7 +43,7 @@ public class Schedule extends Activity {
 		txtHome = (TextView) findViewById(R.id.txtHome);
 		txtAbout = (TextView) findViewById(R.id.txtAbout);
 		txtSchedule = (TextView) findViewById(R.id.txtSchedule);
-		txtSpeakers = (TextView) findViewById(R.id.txtSpeaker);
+		txtInstr = (TextView) findViewById(R.id.txtInstr);
 		txtArrangements = (TextView) findViewById(R.id.txtArrangement);
 		txtContact = (TextView) findViewById(R.id.txtContact);
 		checkTar = new File("/mnt/sdcard/schedule.zip");
@@ -156,7 +156,7 @@ public class Schedule extends Activity {
 			}
 		});
 
-		txtSpeakers.setOnClickListener(new OnClickListener() {
+		/*txtSpeakers.setOnClickListener(new OnClickListener() {
 
 			@SuppressLint("NewApi")
 			@Override
@@ -167,7 +167,26 @@ public class Schedule extends Activity {
 				startActivity(infoactivity);
 				finish();
 			}
+		});*/
+		
+		txtInstr.setOnClickListener(new OnClickListener() {
+
+			@SuppressLint("NewApi")
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				File pdfFile = new File("/mnt/sdcard/schedule/geninstr.pdf");
+				if (pdfFile.exists()) {
+
+					Uri path = Uri.fromFile(pdfFile);
+					Intent pdfIntent = new Intent(Intent.ACTION_VIEW);
+					pdfIntent.setDataAndType(path, "application/pdf");
+					pdfIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+					startActivity(pdfIntent);
+				}
+			}
 		});
+
 
 		txtArrangements.setOnClickListener(new OnClickListener() {
 
@@ -188,7 +207,7 @@ public class Schedule extends Activity {
 			@SuppressLint("NewApi")
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				// TODO Auto-generat	ed method stub
 				v.setAlpha((float) 0.2);
 				Intent infoactivity = new Intent(Schedule.this, ContactUs.class);
 				startActivity(infoactivity);

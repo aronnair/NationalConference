@@ -1,10 +1,13 @@
 package com.iitb.aakash.nationalconference;
 
+import java.io.File;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -13,7 +16,7 @@ import android.widget.TextView;
 
 public class Home extends Activity {
 
-	TextView txtHome, txtAbout, txtSchedule, txtSpeakers, txtArrangements,
+	TextView txtHome, txtAbout,txtInstr, txtSchedule, txtArrangements,
 			txtContact;
 
 	@Override
@@ -24,7 +27,8 @@ public class Home extends Activity {
 		txtHome = (TextView) findViewById(R.id.txtHome);
 		txtAbout = (TextView) findViewById(R.id.txtAbout);
 		txtSchedule = (TextView) findViewById(R.id.txtSchedule);
-		txtSpeakers = (TextView) findViewById(R.id.txtSpeaker);
+		/*txtSpeakers = (TextView) findViewById(R.id.txtSpeaker);*/
+		txtInstr = (TextView) findViewById(R.id.txtInstr);
 		txtArrangements = (TextView) findViewById(R.id.txtArrangement);
 		txtContact = (TextView) findViewById(R.id.txtContact);
 
@@ -54,7 +58,7 @@ public class Home extends Activity {
 			}
 		});
 
-		txtSpeakers.setOnClickListener(new OnClickListener() {
+		/*txtSpeakers.setOnClickListener(new OnClickListener() {
 
 			@SuppressLint("NewApi")
 			@Override
@@ -64,6 +68,25 @@ public class Home extends Activity {
 				Intent infoactivity = new Intent(Home.this, Speakers.class);
 				startActivity(infoactivity);
 				finish();
+			}
+		});*/
+		
+		
+		txtInstr.setOnClickListener(new OnClickListener() {
+
+			@SuppressLint("NewApi")
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				File pdfFile = new File("/mnt/sdcard/schedule/geninstr.pdf");
+				if (pdfFile.exists()) {
+
+					Uri path = Uri.fromFile(pdfFile);
+					Intent pdfIntent = new Intent(Intent.ACTION_VIEW);
+					pdfIntent.setDataAndType(path, "application/pdf");
+					pdfIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+					startActivity(pdfIntent);
+				}
 			}
 		});
 

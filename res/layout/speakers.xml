@@ -87,14 +87,14 @@
             android:text="|"
             android:textSize="30dp" />
 
-        <TextView
+       <!--  <TextView
             android:id="@+id/txtSpeaker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Speakers"
             android:textColor="@android:color/black"
             android:textSize="20dp" />
-
+ -->
         <!-- <TextView
             android:id="@+id/divider"
             android:layout_width="wrap_content"

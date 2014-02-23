@@ -25,7 +25,7 @@ public class Speakers extends Activity {
 		txtHome = (TextView) findViewById(R.id.txtHome);
 		txtAbout = (TextView) findViewById(R.id.txtAbout);
 		txtSchedule = (TextView) findViewById(R.id.txtSchedule);
-		txtSpeakers = (TextView) findViewById(R.id.txtSpeaker);
+		//txtSpeakers = (TextView) findViewById(R.id.txtSpeaker);
 		txtArrangements = (TextView) findViewById(R.id.txtArrangement);
 		txtContact = (TextView) findViewById(R.id.txtContact);
 		

@@ -10,5 +10,6 @@
     <string name="title_activity_speakers">Speakers</string>
     <string name="title_activity_gettinghere">Gettinghere</string>
     <string name="title_activity_schedule">Schedule</string>
+    <string name="title_activity_gen_instructions">GenInstructions</string>
 
 </resources>
