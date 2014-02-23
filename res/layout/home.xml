@@ -98,10 +98,28 @@
                 android:paddingRight="20dp"
                 android:textSize="15dp"
                 android:textAlignment="center"
-                android:text="The 21st century has heralded an increasingly knowledge-driven environment. To stay relevant in this new world, India must continue to expand access to higher education while preserving quality and reducing costs. This situation is not unique to India, but given its enormous size and unique position, our challenges are formidable. " />
+                android:text="The conference brings together various stakeholders, viz., academics and
+
+experts, the private sector, and the officials from the government and regulatory bodies, with a view 
+
+to devise the strategy and action for improving the learning outcomes of students, empowering 
+
+them by increasing their choices. It also aims to understand and address the issues faced by faculty, 
+
+and will examine the assessment and regulatory issues in the use of technology in higher education." />
         </LinearLayout>
     </LinearLayout>
-
+    
+ 	<View
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:background="@android:color/darker_gray"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight ="20dp"
+    android:alpha="0.5"
+     />
+    
     <!-- BOTTOM MENU -->
 
     <LinearLayout
@@ -111,6 +129,7 @@
         android:gravity="center"
         android:orientation="horizontal" >
 
+        	        	
         <TextView
             android:id="@+id/txtHome"
             android:layout_width="wrap_content"
