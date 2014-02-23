@@ -73,6 +73,24 @@
             android:text="|"
             android:textSize="30dp" />
         
+         <TextView
+            android:id="@+id/txtInstr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="General Instructions"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20dp" /> 
+        
+        <TextView
+            android:id="@+id/divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="|"
+            android:textSize="30dp" />
+        
+        
         <TextView
             android:id="@+id/txtSchedule"
             android:layout_width="wrap_content"
@@ -90,13 +108,13 @@
             android:text="|"
             android:textSize="30dp" />
 
-        <TextView
+       <!--  <TextView
             android:id="@+id/txtSpeaker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Speakers"
             android:textColor="@android:color/darker_gray"
-            android:textSize="20dp" />
+            android:textSize="20dp" /> -->
 
         <!-- <TextView
             android:id="@+id/divider"
@@ -115,7 +133,7 @@
             android:textColor="@android:color/darker_gray"
             android:textSize="20dp" /> -->
 
-        <TextView
+      <!--   <TextView
             android:id="@+id/divider"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -123,7 +141,7 @@
             android:paddingRight="10dp"
             android:text="|"
             android:textSize="30dp" />
-
+ -->
         <TextView
             android:id="@+id/txtArrangement"
             android:layout_width="wrap_content"
