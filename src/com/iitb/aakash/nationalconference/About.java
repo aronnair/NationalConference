@@ -88,6 +88,7 @@ public class About extends Activity {
 					pdfIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 					startActivity(pdfIntent);
 				}
+	
 			}
 		});
 

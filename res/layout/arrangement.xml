@@ -76,7 +76,7 @@
             android:id="@+id/txtInstr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="General Instructions"
+            android:text="Guidelines"
             android:textColor="@android:color/darker_gray"
             android:textSize="20dp" /> 
         
@@ -144,7 +144,7 @@
             android:id="@+id/txtArrangement"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Arrangements"
+            android:text="Accommodation"
             android:textColor="@android:color/black"
             android:textSize="20dp" />
 
